@@ -1,0 +1,11 @@
+com\example\api\ApiApplication.class
+com\example\api\repository\UserRepository.class
+com\example\api\repository\ProductRepository.class
+com\example\api\model\User.class
+com\example\api\repository\CategoryRepository.class
+com\example\api\controller\CategoryController.class
+com\example\api\controller\ProductController.class
+com\example\api\model\Product.class
+com\example\api\controller\UserController.class
+com\example\api\model\Category.class
+com\example\api\config\CorsConfig.class
