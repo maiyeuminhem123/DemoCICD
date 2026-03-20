@@ -21,7 +21,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./backend        # Chỗ này cực kỳ quan trọng: trỏ vào thư mục backend
+          file: ./backend/Dockerfile # Chỉ định chính xác file Dockerfile nằm ở đâu
           push: true
-          # Thay 'my-spring-boot-app' bằng tên ông muốn đặt cho Image
           tags: ${{ secrets.DOCKER_USERNAME }}/my-spring-boot-app:latest
