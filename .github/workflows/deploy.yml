@@ -24,7 +24,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: thuan911/my-spring-boot-app:latest
+          tags: thuan911/project-final:latest
 
       - name: Triển khai lên DevOps Classroom
         run: |
