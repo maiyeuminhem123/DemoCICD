@@ -24,7 +24,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-spring-boot-app:latest
+          tags: thuan911/my-spring-boot-app:latest
 
       - name: Trigger Webhook Deploy
         run: |
