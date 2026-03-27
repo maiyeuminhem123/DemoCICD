@@ -21,7 +21,11 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./backend        # Chỗ này cực kỳ quan trọng: trỏ vào thư mục backend
-          file: ./backend/Dockerfile # Chỉ định chính xác file Dockerfile nằm ở đâu
+          context: ./backend
+          file: ./backend/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/my-spring-boot-app:latest
+
+      - name: Trigger Webhook Deploy
+        run: |
+          curl -X POST "${{ secrets.DEPLOY_URL }}"
